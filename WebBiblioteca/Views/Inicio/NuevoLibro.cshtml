@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NuevoLibro</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <h1>Nuevo Libro</h1>
+    @if (TempData["error"] != null)
+    {
+        <div>
+            <b>Ocurrio un error: @TempData["error"]</b>
+        </div>
+    }
+    @if (TempData["errorvalidacion"] != null)
+    {
+        <div>
+            <b>@TempData["errorvalidacion"]</b>
+        </div>
+    }
+    <div>
+        <form action="/Inicio/AgregarLibro" method="post">
+            <label>Titulo</label>
+            <input type="text" name="Titulo" required />
+            @Html.TextBox("Titulo", null, new { @class = "form-control" })
+
+            <br />
+            <label>Autor</label>
+            <input type="text" name="Autor" required />
+            <br />
+            <label>Genero</label>
+            <input type="text" name="Genero" required />
+            <br />
+            <label>Numero de copias</label>
+            <input type="text" name="Copias" required />
+            <br />
+            <a href="/Inicio/Index">Regresar</a>
+            <input type="submit" value="Agregar" />
+        </form>
+    </div>
+</body>
+</html>

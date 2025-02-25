@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DevolucionLibro</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <h1> Libro</h1>
+    @if (TempData["errorvalidacion"] != null)
+    {
+        <div>
+            <b>@TempData["errorvalidacion"]</b>
+        </div>
+    }
+    <div>
+        <form action="/Inicio/DevueltoLibro" method="post">
+            <label>Ingrese el codigo del libro a prestar</label>
+            <input type="number" min="1" name="Codigo" />
+            <br />
+            <label>Numero de copias a prestar</label>
+            <input type="number" min="1" name="Cantidad" />
+            <br />
+            <a href="/Inicio/Index" class="btn btn-primary">Regresar</a>
+            <input type="submit" class="btn btn-success" value="Devolver" />
+        </form>
+    </div>
+</body>
+</html>

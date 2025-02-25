@@ -1,0 +1,45 @@
+﻿@using WebBiblioteca.Models
+@model E_Libro
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar Libro</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <h1>Editar Libro</h1>
+    @if (TempData["errorvalidacion"] != null)
+    {
+        <div>
+            <b>@TempData["errorvalidacion"]</b>
+        </div>
+    }
+    <div>
+        <form action="/Inicio/EditarLibro" method="post">
+            <input hidden type="text" name="ID" value="@Model.ID" required />
+            <label>Titulo</label>
+            <input type="text" name="Titulo" value="@Model.Titulo" required />
+            <br />
+            <label>Autor</label>
+            <input type="text" name="Autor" value="@Model.Autor" required />
+            <br />
+            <label>Genero</label>
+            <input type="text" name="Genero" value="@Model.Genero" required />
+            <br />
+            <label>Numero de copias</label>
+            <input type="text" name="Copias" value="@Model.Copias" required />
+            <br />
+            <a href="/Inicio/Index" class="btn btn-primary">Regresar</a>
+            <input type="submit" class="btn btn-success" value="Actualizar" />
+        </form>
+    </div>
+</body>
+</html>

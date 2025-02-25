@@ -1,0 +1,42 @@
+﻿@using WebBiblioteca.Models
+@model E_Libro
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EliminarLibro</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Eliminar Libro</h1>
+
+        <form action="/Inicio/BorrarLibro" method="post">
+            <label>ID</label>
+            <input type="text" name="ID" value="@Model.ID" readonly />
+            <br />
+            <label>Titulo</label>
+            <input type="text" name="Titulo" value="@Model.Titulo" readonly />
+            <br />
+            <label>Autor</label>
+            <input type="text" name="Autor" value="@Model.Autor" readonly />
+            <br />
+            <label>Genero</label>
+            <input type="text" name="Genero" value="@Model.Genero" readonly />
+            <br />
+            <label>Numero de copias</label>
+            <input type="text" name="Copias" value="@Model.Copias" readonly />
+            <br />
+            <label>¿Seguro que desea Eliminar este Libro?</label>
+            <input type="submit" name="Eliminar" value="SI" class="btn btn-success" />
+            <input type="submit" name="Eliminar" value="NO" class="btn btn-danger" />
+        </form>
+    </div>
+</body>
+</html>

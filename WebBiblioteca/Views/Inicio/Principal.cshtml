@@ -1,0 +1,66 @@
+﻿
+@using WebBiblioteca.Models
+@model List<E_Libro>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Biblioteca</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Biblioteca</h1>
+        @if (TempData["mensaje"] != null)
+        {
+            <div>
+                <b>@TempData["mensaje"]</b>
+            </div>
+        }
+        @if (TempData["error"] != null)
+        {
+            <div>
+                <b>Ocurrio un error: @TempData["error"]</b>
+            </div>
+        }
+        <a href="/Inicio/VistaPrestamo"  class="btn btn-primary " >Prestamo</a>
+        <a href="/Inicio/VistaDevolucion"  class="btn btn-primary">Devolucion</a>
+        <a href="/Inicio/VistaAgregar"  class="btn btn-primary">Agregar</a>
+        <table class="table table-bordered table-success table-hover">
+            <thead class="text-center">
+                <tr>
+                    <td>Codigo</td>
+                    <td>Titulo</td>
+                    <td>Autor</td>
+                    <td>Genero</td>
+                    <td>Copias disponibles</td>
+                    <td>Acciones</td>
+                    <td>Acciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (E_Libro libro in Model)
+                {
+                    <tr>
+                        <td>@libro.ID</td>
+                        <td>@libro.Titulo</td>
+                        <td>@libro.Autor</td>
+                        <td>@libro.Genero</td>
+                        <td class="text-center">@libro.Copias</td>
+                        <td><a href="/Inicio/VistaEditar/?ID=@libro.ID" class="btn btn-success">Editar</a></td>
+                        <td><a href="/Inicio/VistaBorrar/@libro.ID" class="btn btn-danger">Borrar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
