@@ -6,7 +6,7 @@ using System.Web;
 namespace WebBiblioteca.Models
 {
     /// <summary>
-    /// Modelo de datos para un libro en la biblioteca. ahora habra otro cambio
+    /// Modelo de datos para un libro en la biblioteca. ahora habra otro cambio, y otro cambio, y otro cambio.
     /// </summary>
     public class E_Libro
     {
