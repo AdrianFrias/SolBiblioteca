@@ -13,7 +13,7 @@ namespace WebBiblioteca.Models
         /// </summary>
         public string Titulo { get; set; }
         /// <summary>
-        /// Autor del libro.
+        /// Autor del libro. y mas cambios
         /// </summary>
         public string Autor { get; set; }
         public string Genero { get; set; }
