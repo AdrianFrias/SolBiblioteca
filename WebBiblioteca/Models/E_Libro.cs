@@ -5,6 +5,9 @@ using System.Web;
 
 namespace WebBiblioteca.Models
 {
+    /// <summary>
+    /// Modelo de datos para un libro en la biblioteca.
+    /// </summary>
     public class E_Libro
     {
         public int ID { get; set; }
