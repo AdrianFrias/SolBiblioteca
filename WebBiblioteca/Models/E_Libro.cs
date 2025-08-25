@@ -9,7 +9,7 @@ namespace WebBiblioteca.Models
     {
         public int ID { get; set; }
         /// <summary>
-        /// Título del libro.
+        /// Título del libro. y una breve descripción del contenido.
         /// </summary>
         public string Titulo { get; set; }
         public string Autor { get; set; }
