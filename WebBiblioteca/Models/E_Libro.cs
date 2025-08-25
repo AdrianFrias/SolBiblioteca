@@ -20,6 +20,9 @@ namespace WebBiblioteca.Models
         /// </summary>
         public string Autor { get; set; }
         public string Genero { get; set; }
+        /// <summary>
+        /// Número de copias disponibles del libro en la biblioteca. y massss
+        /// </summary>
         public int Copias { get; set; }
     }
 }
