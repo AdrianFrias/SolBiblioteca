@@ -10,6 +10,9 @@ namespace WebBiblioteca.Datos
 {
     public class D_Libro
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private string cadenaconexion = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
         public List<E_Libro> ObtenerBiblioteca()
         {
