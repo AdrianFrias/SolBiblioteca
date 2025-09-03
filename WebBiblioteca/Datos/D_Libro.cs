@@ -48,6 +48,10 @@ namespace WebBiblioteca.Datos
             }
             return coleccion;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="libroNuevo"></param>
         public void AgregarNuevoLibro(E_Libro libroNuevo)
         {
             SqlConnection conexion = new SqlConnection(cadenaconexion);
