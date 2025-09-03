@@ -71,6 +71,9 @@ namespace WebBiblioteca.Datos
                 comando.ExecuteNonQuery();
                 conexion.Close();
             }
+            /// <summary>
+            /// 
+            /// </summary>
             catch (Exception ex)
             {
                 throw ex;
