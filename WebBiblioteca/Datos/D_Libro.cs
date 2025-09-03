@@ -57,6 +57,7 @@ namespace WebBiblioteca.Datos
             SqlConnection conexion = new SqlConnection(cadenaconexion);
             try
             {
+                ///
                 conexion.Open();
                 string query = "INSERT INTO Biblioteca(Titulo,Autor,Genero,Copias) " +
                     "VALUES (@titulo,@autor,@genero,@copias)";
