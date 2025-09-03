@@ -160,6 +160,11 @@ namespace WebBiblioteca.Datos
                 conexion.Close();
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Libro"></param>
+        /// <param name="cantidad"></param>
         public void PrestamoLibro(E_Libro Libro,int cantidad)
         {
             SqlConnection conexion = new SqlConnection(cadenaconexion);
