@@ -16,6 +16,7 @@ namespace WebBiblioteca.Datos
         private string cadenaconexion = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
         public List<E_Libro> ObtenerBiblioteca()
         {
+            /// <summary>
             List<E_Libro> coleccion = new List<E_Libro>();
             SqlConnection conexion = new SqlConnection(cadenaconexion);
             try
